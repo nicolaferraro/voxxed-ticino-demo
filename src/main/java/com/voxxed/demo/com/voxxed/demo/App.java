@@ -35,7 +35,8 @@ public class App {
         @Override
         public void configure() throws Exception {
 
-            rest().get("/")
+            // full path: /api/hello
+            rest().get("/hello")
                     .produces("text/plain")
                     .route()
                     .setBody().constant("Hello Voxxed from " + InetAddress.getLocalHost());
